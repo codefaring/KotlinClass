@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         val shopUp = ActivityMainBinding.inflate(layoutInflater)
         setContentView(shopUp.root)
 
-        // 프라이머리 생성자
+        // 주 생성자
         class Person(value: String) {
             init {
                 Log.d("Person Class", "전달받은 파라미터는 ${value}")
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         Person("프라이머리")
 
-        // 세컨더리 생성자
+        // 부 생성자
         // 파라미터의 개수 또는 파라미터 타입이 다르면 중복해서 만들 수 있다.
         class Kotlin {
             constructor(value: String) {
