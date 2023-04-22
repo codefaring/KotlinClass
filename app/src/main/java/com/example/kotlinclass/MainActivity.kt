@@ -16,7 +16,10 @@ class MainActivity : AppCompatActivity() {
         // class Person constructor(value: String) { 'constructor'이 생략이 가능
         class Person(value: String) {   // constructor 생략된 모습
             init {
-                Log.d("Person Class", "전달받은 파라미터는 ${value}")
+                printin("value: $value")    // 초기화 성공
+            }
+            fun someFun() {
+                printin("value: $value")    // 오류  
             }
         }
         
