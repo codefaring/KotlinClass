@@ -13,11 +13,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(shopUp.root)
 
         // 주 생성자
-        class Person(value: String) {
+        // class Person constructor(value: String) { 'constructor'이 생략이 가능
+        class Person(value: String) {   // constructor 생략된 모습
             init {
                 Log.d("Person Class", "전달받은 파라미터는 ${value}")
             }
         }
+        
 
         Person("프라이머리")
 
