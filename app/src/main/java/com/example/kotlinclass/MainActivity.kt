@@ -16,10 +16,30 @@ class MainActivity : AppCompatActivity() {
         // class Person constructor(value: String) { 'constructor'이 생략이 가능
         class Person(value: String) {   // constructor 생략된 모습
             init {
-                printin("value: $value")    // 초기화 성공
+                println("value: $value")    // 초기화 성공
             }
             fun someFun() {
-                printin("value: $value")    // 오류  
+                println("value: $value")    // 오류  
+            }
+        }
+        
+        //클래스에서 변수 선언하고 매개변수를 변수에 대입
+        class User(name: String, age: Int) {
+            var name: String
+            var age: Int
+            init {
+                this.name = name
+                this.age = age
+            }
+            fun into() {
+                println("name: $name, age: $age")
+            }
+        }
+        
+        // val 키워드를 생성자 매개변수에 넣어서 바로 사용
+        class FirstUse(val par1: Int, val Par2: Int) {
+            fun useNow() {
+                println("par1 값은 $par1, par2 값은 $par2")   
             }
         }
         
