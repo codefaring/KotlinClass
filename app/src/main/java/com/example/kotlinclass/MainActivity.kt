@@ -50,15 +50,29 @@ class MainActivity : AppCompatActivity() {
         // 파라미터의 개수 또는 파라미터 타입이 다르면 중복해서 만들 수 있다.
         class Kotlin {
             constructor(value: String) {
-                Log.d("Kotlin Class", "전달받은 파라미터는 ${value}")
+                println("전달받은 파라미터는 ${value}")
             }
             constructor(value: Int) {
-                Log.d("Kotlin Class", "전달받은 파라미터는 ${value}")
+                println("전달받은 파라미터는 ${value}")
             }
         }
         
         Kotlin("값")     // String 파라미터
         Kotlin(10)     // Integer 파라미터
+        
+        // 주 생성자와 부 생성자
+        // class Project(name: String) {
+        //     constructor(name: String, ver: Int) {   // 오류발생
+        //         코드 내용
+        //     }
+        // }
+        
+        // 알맞은 코드
+        class Project(name: String) {
+            constructor(name: String, ver: Int): this(name) {
+                코드     
+            }
+        }
 
         // 디폴트 생성자
        class Student {
